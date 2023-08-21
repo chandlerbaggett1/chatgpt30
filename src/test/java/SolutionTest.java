@@ -66,13 +66,25 @@ public class SolutionTest {
 
     @Test
     public void twoSumTest() {
-        int[] arr = new int[]{1, 5, 9, 11};
-        int[] ans = solution.twoSum(arr, 14);
+        int[] arr = new int[]{2,7,11,15};
+        int[] ans = solution.twoSum(arr, 9);
+        Assertions.assertEquals(ans[0], 0);
+        Assertions.assertEquals(ans[1], 1);
+    }
+
+    @Test
+    public void twoSumTest1() {
+        int[] arr = new int[]{3,2,4};
+        int[] ans = solution.twoSum(arr, 6);
         Assertions.assertEquals(ans[0], 1);
         Assertions.assertEquals(ans[1], 2);
     }
 
-//    @Test
-//    public void longestSubstringWithoutRepeatingCharacters(String s) {
-//    }
+    @Test
+    public void twoSumTest2() {
+        int[] arr = new int[]{3,3};
+        int[] ans = solution.twoSum(arr, 6);
+        Assertions.assertEquals(ans[0], 0);
+        Assertions.assertEquals(ans[1], 1);
+    }
 }
