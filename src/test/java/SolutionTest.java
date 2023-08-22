@@ -27,4 +27,12 @@ public class SolutionTest {
         Assertions.assertEquals(ans[0], 0);
         Assertions.assertEquals(ans[1], 1);
     }
+
+    @Test
+    public void twoSumTest3() {
+        int[] arr = new int[]{1, 6, 9, 31};
+        int[] ans = solution.twoSum(arr, 40);
+        Assertions.assertEquals(ans[0], 2);
+        Assertions.assertEquals(ans[1], 3);
+    }
 }
