@@ -6,9 +6,6 @@ public class Solution {
 //
 //    Two Sum (#1): Use a hash map to store the complement of the target and current value. Iterate through the array
 //    and find the match. Time Complexity: O(n), Space Complexity: O(n).
-//
-//    Longest Substring Without Repeating Characters (#3): Use sliding window technique with a set to detect duplicates.
-//    Time Complexity: O(n), Space Complexity: O(min(n, m)) where m is the size of the character set.
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < nums.length; i++) {
@@ -21,6 +18,9 @@ public class Solution {
 
         throw new IllegalArgumentException("No match found!");
     }
+//    Longest Substring Without Repeating Characters (#3): Use sliding window technique with a set to detect duplicates.
+//    Time Complexity: O(n), Space Complexity: O(min(n, m)) where m is the size of the character set.
+//
 //    Median of Two Sorted Arrays (#4): Use binary search on the smaller array to find the median. Time Complexity:
 //    O(log(min(m, n))), Space Complexity: O(1).
 //
