@@ -2,10 +2,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution {
-//    Two Sum - Arrays
+//    Data Structures & Algorithms
+//    Two Sum - Arrays (Easy)
 //    Problem Number: 1
-//    Solution: Use a HashMap to store the complement and its index. Iterate through the array, and if the complement is
-//    found, return the indices.
+//    Solution: Use a hash map to store the difference of the target and current element with the current index.
 //    Time Complexity: O(n)
 //    Space Complexity: O(n)
     public int[] twoSum(int[] nums, int target) {
@@ -20,179 +20,155 @@ public class Solution {
 
         throw new IllegalArgumentException("No match found!");
     }
-//    Reverse Integer - Math
-//    Problem Number: 7
-//    Solution: Repeatedly pop the last digit off the original number and push it onto the reversed number, handling
-//    overflow.
-//    Time Complexity: O(log(x))
-//    Space Complexity: O(1)
-//
-//    Longest Substring Without Repeating Characters - Strings
+//    Add Two Numbers - Linked List (Medium)
+//    Problem Number: 2
+//    Solution: Iterate through both lists, summing corresponding elements, and handle carry over.
+//    Time Complexity: O(max(n, m))
+//    Space Complexity: O(max(n, m))
+//    Longest Substring Without Repeating Characters - Strings (Medium)
 //    Problem Number: 3
-//    Solution: Use the sliding window technique with a HashSet to track characters.
+//    Solution: Use a sliding window and a set to track unique characters.
 //    Time Complexity: O(n)
-//    Space Complexity: O(min(n, m)) where m is the size of the charset
-//
-//    Median of Two Sorted Arrays - Binary Search
+//    Space Complexity: O(min(n, m))
+//    Median of Two Sorted Arrays - Arrays (Hard)
 //    Problem Number: 4
-//    Solution: Apply binary search on the smaller array to find the partition, then calculate the median.
-//    Time Complexity: O(log(min(m, n)))
+//    Solution: Use a binary search to partition the arrays into two halves.
+//    Time Complexity: O(log(min(n, m)))
 //    Space Complexity: O(1)
-//
-//    Longest Palindromic Substring - Dynamic Programming
+//    Longest Palindromic Substring - Dynamic Programming (Medium)
 //    Problem Number: 5
-//    Solution: Use a 2D boolean array for dynamic programming, and expand around the center for each character.
-//    Time Complexity: O(n^2)
-//    Space Complexity: O(n^2)
-//
-//    ZigZag Conversion - Strings
-//    Problem Number: 6
-//    Solution: Iterate through the string and use an array of StringBuilder objects to append characters in the zigzag
-//    pattern.
-//    Time Complexity: O(n)
-//    Space Complexity: O(n)
-//
-//    Container With Most Water - Two Pointers
-//    Problem Number: 11
-//    Solution: Use two pointers and move them inward, always moving the pointer with the shorter height.
-//    Time Complexity: O(n)
-//    Space Complexity: O(1)
-//
-//    Integer to Roman - Math
-//    Problem Number: 12
-//    Solution: Use arrays to define the Roman numerals and their corresponding values, then build the result.
-//    Time Complexity: O(1)
-//    Space Complexity: O(1)
-//
-//    3Sum - Arrays
-//    Problem Number: 15
-//    Solution: Sort the array, then use a fixed pointer and two moving pointers to find the triplets.
-//    Time Complexity: O(n^2)
-//    Space Complexity: O(log n) to O(n), depending on the sorting algorithm
-//
-//    Valid Parentheses - Stacks
-//    Problem Number: 20
-//    Solution: Use a stack to match opening and closing brackets.
-//    Time Complexity: O(n)
-//    Space Complexity: O(n)
-//
-//    Merge Intervals - Sorting
-//    Problem Number: 56
-//    Solution: Sort the intervals by start time, then merge overlapping intervals.
-//    Time Complexity: O(n log n)
-//    Space Complexity: O(log n) to O(n), depending on the sorting algorithm
-//
-//    Maximum Subarray - Dynamic Programming
-//    Problem Number: 53
-//    Solution: Use Kadane's algorithm to find the maximum sum contiguous subarray.
-//    Time Complexity: O(n)
-//    Space Complexity: O(1)
-//
-//    Jump Game - Greedy
-//    Problem Number: 55
-//    Solution: Use a variable to keep track of the farthest reachable index.
-//    Time Complexity: O(n)
-//    Space Complexity: O(1)
-//
-//    Permutations - Backtracking
-//    Problem Number: 46
-//    Solution: Use backtracking to generate all possible permutations.
-//    Time Complexity: O(n!)
-//    Space Complexity: O(n)
-//
-//    Rotate Image - Arrays
-//    Problem Number: 48
-//    Solution: Transpose the matrix, then reverse each row.
+//    Solution: Utilize DP to expand around the center of the palindrome.
 //    Time Complexity: O(n^2)
 //    Space Complexity: O(1)
-//
-//    Group Anagrams - Hashing
-//    Problem Number: 49
-//    Solution: Use a HashMap with sorted strings as keys to group anagrams.
-//    Time Complexity: O(nk log k), where k is the maximum length of a string
-//    Space Complexity: O(nk)
-//
-//    Maximum Product Subarray - Dynamic Programming
-//    Problem Number: 152
-//    Solution: Keep track of the current maximum and minimum products to handle negative numbers.
-//    Time Complexity: O(n)
-//    Space Complexity: O(1)
-//
-//    Word Search - DFS
-//    Problem Number: 79
-//    Solution: Use Depth First Search to explore the board.
-//    Time Complexity: O(n * m * 4^s), where n and m are the dimensions of the board, and s is the length of the word
-//    Space Complexity: O(s)
-//
-//    Binary Tree Inorder Traversal - Trees
+//    LRU Cache - Design, HashTable (Medium)
+//    Problem Number: 146
+//    Solution: Implement using a doubly-linked list and a hash map.
+//    Time Complexity: O(1) for both get and put operations
+//    Space Complexity: O(capacity)
+//    Binary Tree Inorder Traversal - Trees (Medium)
 //    Problem Number: 94
-//    Solution: Use a stack to simulate recursive inorder traversal.
+//    Solution: Recursively traverse the tree or use a stack.
 //    Time Complexity: O(n)
 //    Space Complexity: O(n)
-//
-//    Validate Binary Search Tree - Trees
-//    Problem Number: 98
-//    Solution: Use in-order traversal to check if the values are sorted.
+//    Maximum Subarray - Divide and Conquer, Dynamic Programming (Easy)
+//    Problem Number: 53
+//    Solution: Use Kadane's algorithm to find the maximum subarray sum.
+//    Time Complexity: O(n)
+//    Space Complexity: O(1)
+//    Graphs
+//    Clone Graph - Graphs (Medium)
+//    Problem Number: 133
+//    Solution: Use depth-first search (DFS) to create a copy of the graph.
 //    Time Complexity: O(n)
 //    Space Complexity: O(n)
-//
-//    Symmetric Tree - Trees
-//    Problem Number: 101
-//    Solution: Use recursion or iteration to compare mirrored subtrees.
-//    Time Complexity: O(n)
-//    Space Complexity: O(n)
-//
-//    Binary Tree Level Order Traversal - BFS
-//    Problem Number: 102
-//    Solution: Use a queue to perform Breadth First Search.
-//    Time Complexity: O(n)
-//    Space Complexity: O(n)
-//
-//    Maximal Square - Dynamic Programming
-//    Problem Number: 221
-//    Solution: Use a 2D DP array to track the size of the square.
+//    Number of Islands - Depth-first Search (Medium)
+//    Problem Number: 200
+//    Solution: Use DFS to traverse connected islands, marking visited parts.
 //    Time Complexity: O(m * n)
 //    Space Complexity: O(m * n)
-//
-//    Course Schedule - Graphs
+//    Course Schedule - Topological Sort (Medium)
 //    Problem Number: 207
-//    Solution: Use a topological sort to detect cycles in the graph.
-//    Time Complexity: O(n + e), where n is the number of courses, and e is the number of prerequisites
-//    Space Complexity: O(n + e)
-//
-//    Word Break - Dynamic Programming
-//    Problem Number: 139
-//    Solution: Use dynamic programming to partition the string and check if each partition is in the dictionary.
-//    Time Complexity: O(n^2)
+//    Solution: Use topological sorting to find a valid sequence.
+//    Time Complexity: O(n)
 //    Space Complexity: O(n)
-//
-//    House Robber - Dynamic Programming
-//    Problem Number: 198
-//    Solution: Use dynamic programming to find the maximum amount that can be robbed.
+//    Dynamic Programming
+//    Climbing Stairs - Dynamic Programming (Easy)
+//    Problem Number: 70
+//    Solution: Use DP to calculate the number of ways to climb each step.
 //    Time Complexity: O(n)
 //    Space Complexity: O(1)
-//
-//    Number of Islands - DFS
-//    Problem Number: 200
-//    Solution: Use Depth First Search to traverse the islands.
-//    Time Complexity: O(n * m), where n and m are the dimensions of the grid
-//    Space Complexity: O(n * m)
-//
-//    Implement Trie (Prefix Tree) - Trie
-//    Problem Number: 208
-//    Solution: Implement a trie data structure with insert, search, and startsWith methods.
-//    Time Complexity: O(k), where k is the length of the key
-//    Space Complexity: O(n * k), where n is the number of keys
-//
-//    Product of Array Except Self - Arrays
-//    Problem Number: 238
-//    Solution: Use two arrays to store the left and right products, then multiply them.
+//    Coin Change - Dynamic Programming (Medium)
+//    Problem Number: 322
+//    Solution: Apply DP to find the fewest number of coins needed.
+//    Time Complexity: O(m * n)
+//    Space Complexity: O(n
+//    Longest Increasing Subsequence - Dynamic Programming (Medium)
+//    Problem Number: 300
+//    Solution: Use DP to calculate the length of the longest increasing subsequence.
+//    Time Complexity: O(n^2)
+//    Space Complexity: O(n)
+//    Searching & Sorting
+//    Search in Rotated Sorted Array - Binary Search (Medium)
+//    Problem Number: 33
+//    Solution: Apply binary search to locate the target in a rotated array.
+//    Time Complexity: O(log n)
+//    Space Complexity: O(1)
+//    First Missing Positive - Sorting (Hard)
+//    Problem Number: 41
+//    Solution: Perform cyclic sort to find the first missing positive integer.
 //    Time Complexity: O(n)
-//    Space Complexity: O(1), excluding the output array
-//
-//    Sliding Window Maximum - Deque
-//    Problem Number: 239
-//    Solution: Use a deque to store the indices of elements and maintain the maximum in the current window.
+//    Space Complexity: O(1)
+//    Merge Intervals - Sorting (Medium)
+//    Problem Number: 56
+//    Solution: Sort intervals by start time and merge overlapping intervals.
+//    Time Complexity: O(n log n)
+//    Space Complexity: O(1) if in-place sorting is used
+//    Trees & Graphs
+//    Validate Binary Search Tree - Trees (Medium)
+//    Problem Number: 98
+//    Solution: Use in-order traversal to validate the binary search tree.
 //    Time Complexity: O(n)
-//    Space Complexity: O(k), where k is the size of the window
+//    Space Complexity: O(n)
+//    Lowest Common Ancestor of a Binary Tree - Trees (Medium)
+//    Problem Number: 236
+//    Solution: Use recursion to find the lowest common ancestor.
+//    Time Complexity: O(n)
+//    Space Complexity: O(n)
+//    Word Ladder - Graphs, Breadth-first Search (Medium)
+//    Problem Number: 127
+//    Solution: Use BFS to find the shortest transformation sequence.
+//    Time Complexity: O(M * N)
+//    Space Complexity: O(M * N)
+//    Design & Systems
+//    Design Twitter - Design (Medium)
+//    Problem Number: 355
+//    Solution: Implement using a combination of hash maps and heaps.
+//    Time Complexity: O(log k) for the getNewsFeed operation
+//    Space Complexity: O(n + m)
+//    Design Hit Counter - Design (Medium)
+//    Problem Number: 362
+//    Solution: Use a queue to track hits within a 5-minute window.
+//    Time Complexity: O(1) for hit and O(n) for getHits
+//    Space Complexity: O(n)
+//    Miscellaneous
+//    Sudoku Solver - Backtracking (Hard)
+//    Problem Number: 37
+//    Solution: Apply backtracking to fill the Sudoku board.
+//    Time Complexity: O(9^(n * n))
+//    Space Complexity: O(n * n)
+//    Reverse Nodes in k-Group - Linked List (Hard)
+//    Problem Number: 25
+//    Solution: Reverse every k nodes in the linked list.
+//    Time Complexity: O(n)
+//    Space Complexity: O(1)
+//    Minimum Window Substring - Sliding Window (Hard)
+//    Problem Number: 76
+//    Solution: Use a sliding window to find the minimum window substring.
+//    Time Complexity: O(n)
+//    Space Complexity: O(m)
+//    Trapping Rain Water - Two Pointers (Hard)
+//    Problem Number: 42
+//    Solution: Apply two pointers to compute trapped rainwater.
+//    Time Complexity: O(n)
+//    Space Complexity: O(1)
+//    Serialize and Deserialize Binary Tree - Trees (Hard)
+//    Problem Number: 297
+//    Solution: Implement serialization and deserialization using pre-order traversal.
+//    Time Complexity: O(n)
+//    Space Complexity: O(n)
+//    Substring with Concatenation of All Words - Hash Table (Hard)
+//    Problem Number: 30
+//    Solution: Use a hash map to track word occurrences and sliding window.
+//    Time Complexity: O(n * m)
+//    Space Complexity: O(m)
+//    The Skyline Problem - Divide and Conquer (Hard)
+//    Problem Number: 218
+//    Solution: Apply divide and conquer or a priority queue.
+//    Time Complexity: O(n log n)
+//    Space Complexity: O(n)
+//    Frog Jump - Dynamic Programming (Hard)
+//    Problem Number: 403
+//    Solution: Use DP to track reachable stones.
+//    Time Complexity: O(n^2)
+//    Space Complexity: O(n^2)
 }
