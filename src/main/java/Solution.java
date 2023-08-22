@@ -4,7 +4,8 @@ import java.util.Map;
 public class Solution {
 //    Two Sum - Arrays
 //    Problem Number: 1
-//    Solution: Use a HashMap to store the complement and its index. Iterate through the array, and if the complement is found, return the indices.
+//    Solution: Use a HashMap to store the complement and its index. Iterate through the array, and if the complement is
+//    found, return the indices.
 //    Time Complexity: O(n)
 //    Space Complexity: O(n)
     public int[] twoSum(int[] nums, int target) {
@@ -21,7 +22,8 @@ public class Solution {
     }
 //    Reverse Integer - Math
 //    Problem Number: 7
-//    Solution: Repeatedly pop the last digit off the original number and push it onto the reversed number, handling overflow.
+//    Solution: Repeatedly pop the last digit off the original number and push it onto the reversed number, handling
+//    overflow.
 //    Time Complexity: O(log(x))
 //    Space Complexity: O(1)
 //
@@ -45,7 +47,8 @@ public class Solution {
 //
 //    ZigZag Conversion - Strings
 //    Problem Number: 6
-//    Solution: Iterate through the string and use an array of StringBuilder objects to append characters in the zigzag pattern.
+//    Solution: Iterate through the string and use an array of StringBuilder objects to append characters in the zigzag
+//    pattern.
 //    Time Complexity: O(n)
 //    Space Complexity: O(n)
 //
