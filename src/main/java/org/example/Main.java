@@ -1,5 +1,6 @@
 package org.example;
 
+import java.time.LocalDate;
 import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -11,7 +12,7 @@ public class Main {
                 .limit(2)
                 .boxed()
                 .collect(Collectors.toSet());
-        System.out.println("problems of the day: ");
+        System.out.println(LocalDate.now() + " problems of the day: ");
         set.forEach(System.out::println);
     }
 }
